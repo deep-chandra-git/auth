@@ -14,18 +14,18 @@
     {% if error %}
 
     <div class="container mt-3">
-    
+
         <div class="alert alert-danger alert-dismissible fade show">
-    
+
             {{ error }}
-    
+
             <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-    
+
         </div>
-    
+
     </div>
-    
-    {% endif %}    
+
+    {% endif %}
 
     <div class="container">
 
@@ -70,27 +70,27 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
-<script>
+    <script>
 
-    setTimeout(() => {
+        setTimeout(() => {
 
-        let alerts = document.querySelectorAll(".alert");
+            let alerts = document.querySelectorAll(".alert");
 
-        alerts.forEach(alert => {
+            alerts.forEach(alert => {
 
-            alert.classList.remove("show");
+                alert.classList.remove("show");
 
-            alert.classList.add("fade");
+                alert.classList.add("fade");
 
-            setTimeout(() => {
-                alert.remove();
-            }, 500);
+                setTimeout(() => {
+                    alert.remove();
+                }, 500);
 
-        });
+            });
 
-    }, 5000);
+        }, 5000);
 
-</script>
+    </script>
 
 </body>
 

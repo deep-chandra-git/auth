@@ -1,29 +1,13 @@
-# Virtual Environment
-venv/
 
-# Python Cache
+venv/
 __pycache__/
 *.pyc
-
-# Environment Variables
 .env
-
-# SQLite Database
 db.sqlite3
-
-# VS Code
 .vscode/
-
-# Mac Files
 .DS_Store
-
-# Django Static Files
 staticfiles/
-
-# Logs
 *.log
-
-# Pytest Cache
 .pytest_cache/
 
 # Migrations (optional)

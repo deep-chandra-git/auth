@@ -10,26 +10,21 @@
 </head>
 
 <body class="bg-dark">
-    
+
     {% if error %}
 
-<div class="container mt-3">
+    <div class="container mt-3">
 
-    <div class="alert alert-danger alert-dismissible fade show">
+        <div class="alert alert-danger alert-dismissible fade show">
 
-        {{ error }}
+            {{ error }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
 
-        <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="alert"
-        ></button>
+        </div>
 
     </div>
 
-</div>
-
-{% endif %}
+    {% endif %}
 
     <div class="container">
 
@@ -76,23 +71,23 @@
     <script>
 
         setTimeout(() => {
-    
+
             let alerts = document.querySelectorAll(".alert");
-    
+
             alerts.forEach(alert => {
-    
+
                 alert.classList.remove("show");
-    
+
                 alert.classList.add("fade");
-    
+
                 setTimeout(() => {
                     alert.remove();
                 }, 500);
-    
+
             });
-    
+
         }, 5000);
-    
+
     </script>
 </body>
 
