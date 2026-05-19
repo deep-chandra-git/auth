@@ -7,4 +7,7 @@ urlpatterns = [
     path('login/', views.login),
     path('dashboard/', views.dashboard),
     path('logout/', views.logout),
+
+    path('google-login/', views.google_login),
+    path('google-callback/', views.google_callback),
 ]

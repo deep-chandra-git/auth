@@ -79,6 +79,24 @@ def login(request):
     return render(request, "accounts/login.html")
 
 
+def google_login(request):
+
+    response = supabase.auth.sign_in_with_oauth(
+        {
+            "provider": "google",
+            "options": {
+                "redirect_to": "http://127.0.0.1:8000/google-callback/"
+            }
+        }
+    )
+
+    return redirect(response.url)
+
+def google_callback(request):
+
+    return HttpResponse("Google Login Successful")
+
+
 def dashboard(request):
 
     user = request.session.get("user")
